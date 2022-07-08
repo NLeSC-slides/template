@@ -1,0 +1,1057 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>PRESENTATION TITLE</title>
+
+    <meta name="description" content="PRESENTATION DESCRIPTION">
+    <meta name="author" content="AUTHOR NAME">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reveal.js/4.3.1/reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="reveal.js/4.3.1/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="reveal.js/4.3.1/reveal.js/dist/theme/black.css" id="theme">
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js/4.3.1/reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+
+    <!-- tweak colors and minor details -->
+    <link rel="stylesheet" href="reveal.js/custom_css/escience_4.3.1.css" id="theme">
+
+    <link rel="shortcut icon" type="image/png" href="./files/favicon-32x32.png"/>
+  </head>
+
+  <body onload="setTimeout(function(){addDecorations();}, 100);">
+    <div class="reveal">
+
+      <div id="hidden" style="display: none;">
+        <div id="decoration">
+          <div id="blue_pane_left" style="transition: opacity 1s; background-color: #009DDD; opacity: 0; position: absolute; left: 0; right: 50%; bottom: 0; top: 0; z-index: 2;"></div>
+          <div id="blue_pane_right" style="transition: opacity 1s; background-color: #009DDD; opacity: 0; position: absolute; left: 50%; right: 0; bottom: 0; top: 0; z-index: 2;"></div>
+          <div id="touch_pane" style="background-color: white; transition: opacity 1s; opacity: 0; position: absolute; left: 0; right: 66.6%; bottom: 0; top: 0; display: flex; align-items: center; justify-content: center; z-index: 2;">
+            <h1 style="color: black; text-align: left;">Let's stay<br>in touch</h1>
+          </div>
+          <div id="purple_half_circle_top" style="transition: top 1s; opacity: 1; position: absolute; background-color: #380339; left: 0; top: -17vw; width: 34vw; height: 17vw; border-radius: 0 0 20vw 20vw; z-index: 2;"></div>
+          <div id="yellow_half_strip" style="opacity: 1; transition: bottom 1s; position: absolute; background-color: #FFB213; right: 50%; bottom: -25vw; width: 17vw; height: 25vw; border-radius: 20vw 0 0 0; z-index: 2;"></div>
+          <div id="purple_strip_bottom" style="opacity: 1; transition: bottom 1s; position: absolute; background-color: #380339; right: calc(50% + 17vw); bottom: -10vw; width: 16vw; height: 10vw; border-radius: 20vw 20vw 0 0; z-index: 2;"></div>
+          <div id="logo_color" style="transition: opacity 1s, left 1s; opacity: 0; position: absolute; left: -12vw; top: 1.5vh; z-index: 2;">
+            <img style="width: 12vw;" src="./files/logo-fc.svg">
+          </div>
+          <div id="logo_part_white" style="transition: opacity 1s, left 1s; opacity: 0; position: absolute; left: -12vw; top: 1.5vh; z-index: 2;">
+            <img style="width: 12vw;" src="./files/logo-fc-part-white.svg">
+          </div>
+          <div id="logo_white" style="transition: opacity 1s, left 1s; opacity: 0; position: absolute; left: -12vw; top: 1.5vh; z-index: 2;">
+            <img style="width: 12vw;" src="./files/logo-fc-white.svg">
+          </div>
+          <div id="purple_overlay" style="background-color: #380339; opacity: 0; transition: opacity 1s; position: absolute; left: 0; right: 0; bottom: 0; top: 0; z-index: 1;">
+          </div>
+          <div id="blue_overlay" style="background-color: #009DDD; opacity: 0; transition: opacity 1s; position: absolute; left: 0; right: 0; bottom: 0; top: 0; z-index: 1;">
+          </div>
+          <div id="white_overlay" style="background-color: white; opacity: 0; transition: opacity 1s; position: absolute; left: 0; right: 0; bottom: 0; top: 0; z-index: 1;">
+          </div>
+          <div id="black_overlay" style="background-color: black; opacity: 0; transition: opacity 1s; position: absolute; left: 0; right: 0; bottom: 0; top: 0; z-index: 1;">
+          </div>
+          <div id="yellow_strip" style="background-color: #FFB213; transition: left 1s; width: 10vw; height: 70vh; border-radius: 10vw 10vw 0 0; z-index: 2; position: absolute; left: -10vw; bottom: 0;">
+          </div>
+          <div id="yellow_flag" style="background-color: #FFB213; transition: left 1s, bottom 1s; width: 10vh; height: 12vh; border-radius: 0 6vh 6vh 0; z-index: 3; position: absolute; left: -10vh; bottom: 5vh; margin: 0; padding: 0;">
+            <img id="left_e" src="./files/e-logo.svg" style="position: absolute; height: 10vh; margin: 1vh 0; padding: 0;"></img>
+          </div>
+          <div id="purple_half_circle_bottom" style="transition: bottom 1s; background-color: #380339; width: 20vw; height: 10vw; border-radius: 20vw 20vw 0 0; z-index: 2; position: absolute; left: 0; bottom: -10vw;">
+            <img id="left_e" src="./files/logo-fc-part-white.svg" style="position: absolute; bottom: 2vw; left: 6vw; width: 8vw;"></img>
+          </div>
+          <div id="purple_blob" style="transition: top 1s; position: absolute; display: flex; right: 0; top: -50vh; z-index: 2;">
+            <div style="background-color: #380339; width: 10vw; height: 25vh; border-radius: 0 0 10vw 10vw;">
+            </div>
+            <div style="background-color: #380339; width: 10vw; height: 50vh; border-radius: 0 0 10vw 10vw;">
+            </div>
+            <div class="box" style="background: #380339; position: absolute; right: 10vw; top: 0; width: 5vw; height: calc(25vh + 5vw); border-corner-shape: scoop; background: yellow; background: linear-gradient(45deg,  transparent 10vw, #380339 0) bottom left; background-image: radial-gradient(circle at 0 100%, rgba(204,0,0,0) 5vw, #380339 15px)">
+            </div>
+          </div>
+          <div id="blue_strip" style="background-color: #009DDD; transition: left 1s, right 1s; margin: 0; padding: 0; border-radius: 20vw 0 0 0; z-index: 2; position: absolute; right: -100vw; bottom: 0;">
+            <div id="footer" style="text-align: right; line-height: 130%; padding: 0; margin: 1vw 1vw 1vw 3vw; bottom: 0; right: 0;">
+            </div>
+          </div>
+          <img id="right_e" src="./files/letter-e.svg" style="transition: right 1s, top 1s; position: absolute; top: 10vh; right: -4vw; width: 4vw; z-index: 3;"></img>
+      </div>
+    </div>
+
+    <div class="slides">
+      <section data-markdown="00_title.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!--
+title: PRESENTATION TITLE
+description: PRESENTATION DESCRIPTION
+author: AUTHOR NAME
+version: 4.3.1
+plugins: RevealHighlight, RevealMarkdown, RevealMath.KaTeX, RevealMenu, RevealNotes, RevealSearch, RevealZoom
+-->
+
+<!-- .slide: data-state="blue_overlay yellow_flag yellow_strip purple_half_circle_bottom purple_blob right_e_top" data-background-video="./files/Mood video Homepage 2.mp4" data-background-video-loop data-background-video-muted="true" -->
+
+# My Title
+## Header 2
+### Header 3
+#### Subheader
+
+<br>
+
+**[Author Name](mailto:a.name@esciencecenter.nl)** | **eScience Center**
+
+</section>
+<section data-markdown="10_markdown_101.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" -->
+
+# File Structure
+
+---
+
+<!-- .slide: data-state="standard" -->
+
+## New File, New Column
+- A presentation consists of columns (chapters) of vertically stacked slides
+  - Press ESC to see an overview of the arrangement
+  - Use arrow keys to navigate
+  - Press ESC again to zoom back into the presentation
+- A new file (like this one) creates a new column.
+
+---
+
+<!-- .slide: data-state="standard" -->
+
+## New Slide, Same Column
+
+- Three dashes `---` surrounded by newlines separate one slide from the next.
+- Three equal signs `===` surrounded by newlines create a new column within one file.
+
+===
+
+<!-- .slide: data-state="standard" -->
+
+## New Slide, New Column
+
+</section>
+<section>
+  <section data-state="standard">
+  	<h1>HTML and Markdown</h1>
+  </section>
+  
+  <section data-state="standard">
+  	<h2>Mix and Match</h2>
+  	<ul>
+  		<li>Slides can be Markdown</li>
+			<ul>
+				<li>Use <code>.md</code> file ending</li>
+				<li>Markdown slides can contain HTML snippets</li>
+			</ul>
+			<li>Slides can also be purely HTML</li>
+			<ul>
+				<li>Use <code>.html</code> file ending then</li>
+				<li>But there is no Markdown within HTML</li>
+			</ul>
+  	</ul>
+  	<br>
+  	## this is no header
+  	- this is no list
+  	- because we are within HTML
+  </section>
+</section>
+<section data-markdown="30_backgrounds.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/dna-3539309_1920.jpg"-->
+
+# Backgrounds
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/dna-3539309_1920.jpg"-->
+
+## Image Backgrounds
+
+- Define full screen image backgrounds in the slide header.
+
+---
+
+<!-- .slide: data-state="standard" data-background-video="./files/Mood video Homepage 2.mp4" data-background-video-loop data-background-video-muted="true" -->
+
+## Video Backgrounds
+
+- Videos work too!
+- Make sure to include the `loop` and `muted` tags
+
+</section>
+<section data-markdown="40_overlays.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/dna-3539309_1920.jpg"-->
+
+# Overlays
+
+---
+
+<!-- .slide: data-state="logo yellow_flag blue_overlay" data-background="./files/dna-3539309_1920.jpg"-->
+
+<h2>blue_overlay</h2>
+some background images have more contrast than others ...
+
+<!--
+The is a obscure bug (?) where markdown headers get a HTML ID based on their
+content string. Using keywords like "blue_overlay" steals focus and interferes
+with the theme. That's why we need to use a HTML header <h2> instead of "##"
+here.
+-->
+
+---
+
+<!-- .slide: data-state="logo yellow_flag blue_overlay 4" data-background="./files/dna-3539309_1920.jpg"-->
+
+<h2>blue_overlay 4</h2>
+... so you can change any overlay opacity from 0&nbsp;(0%) to 10&nbsp;(100%) to match background, default 8&nbsp;(80%)
+
+<!--
+&nbsp; is a special HTML character "No Break SPace", it prevents "0 (0%)"
+to be split in the middle. You can also use it for names, like Dr.&nbsp;Seuss.
+-->
+
+---
+
+<!-- .slide: data-state="logo yellow_flag purple_overlay" data-background="./files/dna-3539309_1920.jpg"-->
+
+<h2>purple_overlay</h2>
+
+---
+
+<!-- .slide: data-state="logo yellow_flag white_overlay" data-background="./files/dna-3539309_1920.jpg"-->
+
+<h2>white_overlay</h2>
+
+text color changes automatically
+
+---
+
+<!-- .slide: data-state="logo yellow_flag black_overlay" data-background="./files/dna-3539309_1920.jpg"-->
+
+<h2>black_overlay</h2>
+
+</section>
+<section data-markdown="50_decorations.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+
+# Decorations
+
+---
+
+<!-- .slide: data-state="white_overlay logo" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+
+## logo
+logo color changes according to overlay
+
+---
+
+<!-- .slide: data-state="white_overlay logo purple_half_circle_top" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+
+<h2>purple_half_circle_top</h2>
+logo color changes according to decorations
+
+<!--
+Here's the HTML ID bug again. Using "purple_half_circle_top" as a header
+prevents setting the decoration with the same ID. Hence the use of
+header <h2> again instead of "##". This continues throughout this file.
+-->
+
+---
+
+<!-- .slide: data-state="white_overlay purple_half_circle_bottom" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+
+<h2>purple_half_circle_bottom</h2>
+with logo
+
+---
+
+<!-- .slide: data-state="white_overlay purple_strip_bottom" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+
+<h2>purple_strip_bottom</h2>
+
+---
+
+<!-- .slide: data-state="white_overlay yellow_half_strip" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>yellow_half_strip</h2>
+
+---
+
+<!-- .slide: data-state="white_overlay purple_blob right_e_top" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>purple_blob</h2>
+<h4>(right_e_top)</h4>
+
+---
+
+<!-- .slide: data-state="blue_overlay right_e_top" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>right_e_top</h2>
+
+---
+
+<!-- .slide: data-state="blue_overlay right_e_bottom" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>right_e_bottom</h2>
+
+---
+
+<!-- .slide: data-state="white_overlay yellow_strip" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>yellow_strip</h2>
+
+---
+
+<!-- .slide: data-state="white_overlay yellow_flag" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>yellow_flag</h2>
+
+---
+
+<!-- .slide: data-state="white_overlay" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+<h2>footer line</h2>
+
+Cool paper <sup>[1]</sup>
+
+<footer>[1] <a href="https://duckduckgo.com/?q=cool+paper+source">Paper source</a> ⬅️ click me!</footer>
+
+---
+
+<!-- .slide: data-state="logo blue_overlay yellow_flag purple_half_circle_bottom purple_blob" data-background="./files/telescopic-mirror-74034_1920.jpg"-->
+## or any combination of these
+
+</section>
+<section data-markdown="60_slide_presets.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/amsterdam-3736145_1920.jpg"-->
+
+# Slide Presets
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/amsterdam-3736145_1920.jpg"-->
+
+## standard
+
+---
+
+<!-- .slide: data-state="two_pane" data-background="./files/amsterdam-3736145_1920.jpg"-->
+
+<!--
+The fancier slide designs don't exist in Markdown (yet).
+-->
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 0vw;">
+  <div style="margin: auto; transform: translateX(-3vw) translateX(3%); padding: 0; margin: auto;">
+    <h2>two_pane</h2>
+    <p>slide content</p>
+  </div>
+  <div style="background: white; border-radius: 20px; padding: 1vh 1vw; margin: auto; transform: translate(3vw) translate(-3%);">
+    <!--div style="background: white; border-radius: 20px; padding: 1vh 1vw; margin: auto;"-->
+    <ul>
+      <li>side section</li>
+      <li>box scales with  height</li>
+      <li>content</li>
+      <li>content content content content content content</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+<!-- .slide: data-state="about" data-background="./files/amsterdam-3736145_1920.jpg"-->
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 0;">
+  <div style="margin: auto; transform: translateX(-3vw) translateX(3%); padding: 0; margin: auto; text-align: left;">
+    <h3 style="color: white;">“Empowering researchers across all disciplines through innovative research software”</h3>
+  </div>
+  <div style="margin: auto; transform: translate(3vw) translate(-3%); text-align: left;">
+    <h2>about</h2>
+    <b>Contact Person</b><br>
+    <div style="display: grid; grid-template-columns: 1fr 4fr;">
+      <img style="width: 5vw; border-radius: 100%; float: left;" src="./files/cat.jpg">
+      <div style="margin: auto auto auto 1ex;">
+        Kit McKitterson<br>
+        <a href="mailto:kit@esciencecenter.nl">kit@esciencecenter.nl</a>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 4fr;">
+      <img style="width: 5vw; border-radius: 100%; float: left;" src="./files/cat2.jpg">
+      <div style="margin: auto auto auto 1ex;">
+        Kat McKatterson<br>
+        <a href="mailto:kat@esciencecenter.nl">kat@esciencecenter.nl</a>
+      </div>
+    </div>
+    (supply square image, get rounded profile image)
+  </div>
+</div>
+
+
+---
+
+<!-- .slide: data-state="touch" data-background="./files/amsterdam-3736145_1920.jpg"-->
+
+<div style="text-align: left; margin-left: 40%;">
+  <h2>touch</h2>
+  <table>
+    <tr>
+      <td style="border: none;"><span class="material-icons" style="font-size: 36px; transform: translateY(.4ex);">language</span></td>
+      <td style="border: none;"><a href="https://www.esciencecenter.nl/">esciencecenter.nl</a></td>
+    </tr>
+    <tr>
+      <td style="border: none;"><span class="material-icons" style="font-size: 36px; transform: translateY(.4ex);">mail_outline</span></td>
+      <td style="border: none;"><a href="mailto:info@esciencecenter.nl">info@esciencecenter.nl</a></td>
+    </tr>
+    <tr>
+      <td style="border: none;"><span class="material-icons" style="font-size: 36px; transform: translateY(.4ex);">phone</span></td>
+      <td style="border: none;"><a href="tel:+31204604770">+31 (0)20 460 4770</a></td>
+    </tr>
+  </table>
+</div>
+
+
+</section>
+<section data-markdown="70_layout.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/website-6700615.svg"-->
+
+# Layout
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/website-6700615.svg"-->
+
+## Fragments
+
+- out <!-- .element: class="fragment" data-fragment-index="2" -->
+- of <!-- .element: class="fragment" data-fragment-index="1" -->
+- order <!-- .element: class="fragment" data-fragment-index="3" -->
+- fade out <!-- .element: class="fragment fade-out" -->
+- highlight red <!-- .element: class="fragment highlight-red" -->
+- fade in, then out <!-- .element: class="fragment fade-in-then-out" -->
+- fade up <!-- .element: class="fragment fade-up" -->
+
+<p class="fragment">use as class in HTML</p>
+<p class="fragment">See full list of options at <a href="https://revealjs.com/fragments/">revealjs.com/fragments/</a></p>
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/website-6700615.svg"-->
+
+## Stack
+
+<div class="r-stack">
+  <img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
+  <img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
+  <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+</div>
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/website-6700615.svg"-->
+
+## Fit Text
+
+## Fit one or more line <!-- .element class="r-fit-text"-->
+
+<h2 class="r-fit-text">horizontally</h2>
+
+<h2 class="r-fit-text">without worrying about font-size</h2>
+
+## In HTML or Markdown <!-- .element class="r-fit-text"-->
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/website-6700615.svg"-->
+
+## Stretch
+
+<img class="r-stretch" src="https://placekitten.com/400/400">
+
+fill all remaining space vertically
+
+</section>
+<!--
+Code rendering unfortunately only properly works in pure .html files. If you
+find out why, please let me know.
+-->
+
+<section>
+  <section data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <!-- Image by <a href="https://pixabay.com/users/pixel2013-2364555/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">S. Hermann &amp; F. Richter</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">Pixabay</a> -->
+    <h1>Eye Candy</h1>
+  </section>
+
+  <section data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Code Highlighting</h2>
+    <pre><code data-line-numbers="4-7|9-11|19-21" data-ln-start-from="7">
+    <table>
+      <tr>
+        <td>Avocados</td>
+        <td>$2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Apples</td>
+        <td>$1</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Oranges</td>
+        <td>$2</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>Kiwi</td>
+        <td>$3</td>
+        <td>1</td>
+      </tr>
+    </table>
+    </code></pre>
+  </section>
+
+  <section data-auto-animate data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Animated Code</h2>
+    <pre data-id="code-animation"><code data-trim data-line-numbers>
+t planets = [
+{ name: 'mars', diameter: 6779 },
+
+    </code></pre>
+  </section>
+  <section data-auto-animate data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Animated Code</h2>
+    <pre data-id="code-animation"><code data-trim data-line-numbers>
+t planets = [
+{ name: 'mars', diameter: 6779 },
+{ name: 'earth', diameter: 12742 },
+{ name: 'jupiter', diameter: 139820 }
+
+    </code></pre>
+  </section>
+  <section data-auto-animate data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Animated Code</h2>
+    <pre data-id="code-animation"><code data-trim data-line-numbers>
+t circumferenceReducer = ( c, planet ) => {
+return c + planet.diameter * Math.PI;
+
+
+t planets = [
+{ name: 'mars', diameter: 6779 },
+{ name: 'earth', diameter: 12742 },
+{ name: 'jupiter', diameter: 139820 }
+
+
+t c = planets.reduce( circumferenceReducer, 0 )
+    </code></pre>
+  </section>
+
+  <section data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Beautiful LaTeX</h2>
+    \[\begin{aligned}
+    \dot{x} &amp; = \sigma(y-x) \\
+    \dot{y} &amp; = \rho x - y - xz \\
+    \dot{z} &amp; = -\beta z + xy
+    \end{aligned}\]
+  </section>
+</section>
+
+<section data-markdown="90_interaction.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/gears-1236578_1920.jpg"-->
+
+# Interaction
+
+---
+
+<!-- .slide: data-state="clear_background logo yellow_flag" data-background-iframe="https://en.wikipedia.org"-->
+
+<div style="color: black; background-color: rgba(255, 255, 255, .8);">
+  <h2 style="color: black;">Embed websites</h2>
+  <ul>
+    <li>They have to allow it though...</li>
+    <li>A "clear_background" removes all overlays and allows for interaction with the website</li>
+    <li>Any elements you put on top (like this text frame) lie on top, so click on the website behind to interact with it</li>
+    <li>Once you interact with the website (clicking, etc.) the focus for navigation is gone</li>
+    <ul>
+      <li>This means you need to click on the arrows on the bottom right to proceed</li>
+    </ul>
+  </ul>
+</div>
+
+---
+
+<!-- .slide: data-state="clear_background logo yellow_flag" data-background-image="https://jupyterlab.readthedocs.io/en/stable/_images/jupyterlab.png"-->
+
+<div style="color: black; background-color: rgba(255, 255, 255, .8);">
+  <h2 style="color: black">Embed Jupyter Notebooks</h2>
+  <p>Show your own work when sharing your screen...</p>
+  <p>... or let everybody in the audience code in their browser and play with data</p>
+  <br/>
+  <p>(static image as an example, you have to host it somewhere yourself)</p>
+</div>
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/gears-1236578_1920.jpg"-->
+
+## Embed Interactive Visualizations 1
+
+<div style="width: 50%; float: left;">
+  <p>Embed D3 visualizations into slides, and keep the original interactivity.</p>
+  <p>(click on the globe and drag it to explore the different paths!)</p>
+  <p><span class="u">Visualization:</span><br><a href='https://bl.ocks.org/Fil/63366253a5d2f00640c15b096c29a38c' target='_blank'>Eclipses path</a> by Philippe Riviere and friends</p>
+</div>
+<div style="width: 45%; max-height: 40vh; float: right;" class="fig-container" data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/eclipses.html">
+</div>
+
+---
+
+<!-- .slide: data-state="standard" data-background="./files/gears-1236578_1920.jpg" class="fig-container" data-no-background data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/collision-detection.html" style="overflow: visible"-->
+
+## Embed Interactive Visualizations 2
+
+- Advance slides to trigger visualization transitions
+- Use mouse to interact with the visualization
+- Adapted from [Collision detection](https://bl.ocks.org/mbostock/3231298) by Mike Bostock
+
+---
+
+<!-- .slide: data-state="black_overlay logo yellow_flag" data-background="./files/gears-1236578_1920.jpg"-->
+
+## Multi-visualizations
+
+<div style="width: 48%; float: left;">
+  <p class="no-margin-top small">
+    <a href='https://bl.ocks.org/olearym/ec27b9ac1bf0da42ed8a0d533181693b' target='_blank'>Gooey effect - Hexagon</a> by Nadieh Bremer</p>
+  <div class="fig-container no-margin-top" data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/gooey.html">
+  </div>
+</div>
+<div style="width: 48%; float: right;">
+  <p class="no-margin-top small">
+    <a href='https://bl.ocks.org/olearym/ec27b9ac1bf0da42ed8a0d533181693b' target='_blank'>Modular Multiplication Circle</a> by Megan O'Leary</p>
+  <div class="fig-container no-margin-top" data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/modular-multiplication.html"></div>
+</div>
+
+---
+
+<!-- .slide: data-state="black_overlay logo yellow_flag" data-background="./files/gears-1236578_1920.jpg"-->
+
+## Independent Transitions
+
+<div style="width: 48%; float: left;">
+    <a href='https://bl.ocks.org/mbostock/4165404' target='_blank'>Rainbow worm</a> by Mike Bostock <br>
+    transition on 1 and 3
+  <div class="fig-container no-margin-top" data-preload data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/rainbow.html"></div>
+</div>
+<div style="width: 48%; float: right;">
+  <p class="no-margin-top small">
+    Simple bar graph <br>
+    transition on 2 and 3
+  <div class="fig-container no-margin-top" data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/bar-chart.html"></div>
+</div>
+
+---
+
+<!-- .slide: data-state="black_overlay logo yellow_flag" data-background="./files/gears-1236578_1920.jpg"-->
+
+## Other Libraries
+
+- Also works with other libraries
+- Use mouse-over to learn more about the shown data
+
+<div style="width: 400px; margin: auto;">
+  <a href='https://emeeks.github.io/semiotic/#/semiotic/chord' target='_blank'>Chord diagram</a>
+  <div class="fig-container" data-file="./reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/demo/d3-fig/semiotic-chord.html" data-preload></div>
+</div>
+
+
+</section>
+<section data-markdown="95_menu.md" data-separator=^\r?\n===\r?\n$ data-separator-vertical=^\r?\n---\r?\n$>
+<!-- .slide: data-state="standard" data-background="./files/classroom-1189988_1920.jpg"-->
+
+# Menu
+
+- Click <i class="fas fa-bars"></i> at the bottom left ↙️  to open the slide menu
+- Navigate between slides
+- Entries are arranged by chapters
+
+</section>
+
+    </div>
+
+    <script src="reveal.js/4.3.1/reveal.js/dist/reveal.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js/plugin/zoom/zoom.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js/plugin/math/math.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js/plugin/notes/notes.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js/plugin/search/search.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="reveal.js/4.3.1/reveal.js-plugins/menu/menu.js"></script>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="reveal.js/4.3.1/reveal.js-plugins/menu/font-awesome/css/fontawesome.css">
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+          themes: false,
+          transitions: false,
+          markers: true,
+          hideMissingTitles: true,
+        },
+        dependencies: [
+          {src: 'reveal.js/4.3.1/reveal.js-plugins/reveal.js-d3/reveald3.js'}
+        ],
+        plugins: [ RevealHighlight, RevealMarkdown, RevealMath.KaTeX, RevealMenu, RevealNotes, RevealSearch, RevealZoom ]
+      });
+    </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var decoration = $('#decoration').html();
+      if ( window.location.search.match( /print-pdf/gi ) ) {
+        // for pdf export
+        // 3. On Reveal.js ready event, copy decoration <div> into each `.slide-background` <div>
+        Reveal.addEventListener( 'ready', function( event ) {
+          $('.slide-background').append(decoration);
+        });
+      }
+      else {
+        // for viewing slides
+        $('div.reveal').append(decoration);
+        $('#decoration').remove(); // without this the fadeIn/fadeOut below does not work. why is this necessary?
+      };
+      function setLogoStyle(style) {
+        //style must be one of {"logo_color","logo_white","logo_part_white"}
+
+        //unset everything
+        document.getElementById("logo_color").style.opacity = 0;
+        document.getElementById("logo_white").style.opacity = 0;
+        document.getElementById("logo_part_white").style.opacity = 0;
+
+        //set only what we want
+        document.getElementById(style).style.opacity = 1;
+      };
+      var overview_shown = false;
+      function getOpacity(data_state) {
+        var opacity = 0.8;
+        for (let i = 0; i < 11; i++) {
+          if (data_state.includes(i)) { opacity = i/10; }
+        };
+        return opacity
+      };
+      function addDecorations() {
+        console.log("== set decorations ==")
+        var currentSlide = Reveal.getCurrentSlide();
+        console.log(currentSlide.querySelector("footer"));
+        if (currentSlide.contains(currentSlide.querySelector('footer')))
+        {
+          document.getElementById("footer").innerHTML = currentSlide.querySelector('footer').innerHTML;
+          document.getElementById("blue_strip").style.right = 0;
+          console.log("footer (and blue_strip)");
+        } else {
+          document.getElementById("blue_strip").style.right = "-" + document.getElementById("blue_strip").offsetWidth + "px";
+          console.log("no footer");
+        };
+        if ( currentSlide.getAttribute('data-state') )
+        {
+          var data_state = currentSlide.getAttribute('data-state')
+          var opacity = getOpacity(data_state);
+          console.log("DS" + data_state)
+          // pre-set slide designs
+
+          // standard
+          if ( data_state.includes("standard"))
+          {
+            data_state += " logo yellow_flag white_overlay";
+          };
+
+          // two_pane
+          if ( data_state.includes("two_pane"))
+          {
+            data_state += " logo yellow_flag white_overlay blue_pane_right";
+          };
+
+          // about
+          if ( data_state.includes("about"))
+          {
+            data_state += " logo white_overlay blue_pane_left purple_half_circle_top purple_strip_bottom yellow_half_strip";
+          };
+
+          // touch
+          if ( data_state.includes("touch"))
+          {
+            data_state += " logo blue_overlay touch_pane purple_blob right_e_bottom";
+          };
+
+          // individual elements
+
+          // purple overlay
+          if ( data_state.includes("purple_overlay"))
+          {
+            document.getElementById("purple_overlay").style.opacity = opacity;
+            document.getElementById("purple_overlay").style.transform = "translateY(0)";
+            document.getElementById("logo_color").style.opacity = 0;
+            document.getElementById("logo_white").style.opacity = 0;
+            document.getElementById("logo_part_white").style.opacity = 1;
+            currentSlide.classList.remove("has-light-background");
+            console.log("purple overlay");
+          } else {
+            document.getElementById("purple_overlay").style.opacity = 0;
+            console.log("no purple overlay");
+          };
+
+          // white overlay
+          if ( data_state.includes("white_overlay"))
+          {
+            document.getElementById("white_overlay").style.opacity = opacity;
+            document.getElementById("white_overlay").style.transform = "translateY(0)";
+            document.getElementById("logo_color").style.opacity = 1;
+            document.getElementById("logo_white").style.opacity = 0;
+            document.getElementById("logo_part_white").style.opacity = 0;
+            currentSlide.classList.add("has-light-background");
+            console.log("white overlay");
+          } else {
+            document.getElementById("white_overlay").style.opacity = 0;
+            console.log("no white overlay");
+          };
+
+          // black overlay
+          if ( data_state.includes("black_overlay"))
+          {
+            document.getElementById("black_overlay").style.opacity = opacity;
+            document.getElementById("black_overlay").style.transform = "translateY(0)";
+            document.getElementById("logo_color").style.opacity = 0;
+            document.getElementById("logo_white").style.opacity = 0;
+            document.getElementById("logo_part_white").style.opacity = 1;
+            currentSlide.classList.remove("has-light-background");
+            console.log("black overlay");
+          } else {
+            document.getElementById("black_overlay").style.opacity = 0;
+            console.log("no black overlay");
+          };
+
+          // blue overlay
+          if ( data_state.includes("blue_overlay"))
+          {
+            document.getElementById("blue_overlay").style.opacity = opacity;
+            document.getElementById("blue_overlay").style.transform = "translateY(0)";
+            document.getElementById("logo_color").style.opacity = 0;
+            document.getElementById("logo_white").style.opacity = 1;
+            document.getElementById("logo_part_white").style.opacity = 0;
+            currentSlide.classList.remove("has-light-background");
+            console.log("blue overlay");
+          } else {
+            document.getElementById("blue_overlay").style.opacity = 0;
+            console.log("no blue overlay");
+          };
+
+          // blue pane right
+          if ( data_state.includes("blue_pane_right"))
+          {
+            document.getElementById("blue_pane_right").style.opacity = 1;
+            currentSlide.classList.remove("has-dark-background");
+            currentSlide.classList.add("has-light-background");
+            console.log("blue_pane_right");
+          } else {
+            document.getElementById("blue_pane_right").style.opacity = 0;
+            console.log("no blue_pane_right");
+          };
+
+          // blue pane left
+          if ( data_state.includes("blue_pane_left"))
+          {
+            document.getElementById("blue_pane_left").style.opacity = 1;
+            setLogoStyle("logo_white");
+            currentSlide.classList.remove("has-dark-background");
+            currentSlide.classList.add("has-light-background");
+            console.log("blue_pane_left");
+          } else {
+            document.getElementById("blue_pane_left").style.opacity = 0;
+            console.log("no blue_pane_left");
+          };
+
+          // touch pane
+          if ( data_state.includes("touch_pane"))
+          {
+            document.getElementById("touch_pane").style.opacity = 1;
+            setLogoStyle("logo_color");
+            currentSlide.classList.remove("has-light-background");
+            currentSlide.classList.add("has-dark-background");
+            console.log("touch_pane");
+          } else {
+            document.getElementById("touch_pane").style.opacity = 0;
+            console.log("no touch_pane");
+          };
+
+          // logo
+          if ( data_state.includes("logo"))
+          {
+            document.getElementById("logo_color").style.left = 3 + "vw";
+            document.getElementById("logo_part_white").style.left = 3 + "vw";
+            document.getElementById("logo_white").style.left = 3 + "vw";
+            console.log("logo");
+          } else {
+            document.getElementById("logo_color").style.left = -12 + "vw";
+            document.getElementById("logo_part_white").style.left = -12 + "vw";
+            document.getElementById("logo_white").style.left = -12 + "vw";
+            console.log("no logo");
+          };
+
+          // yellow strip
+          if ( data_state.includes("yellow_strip"))
+          {
+            document.getElementById("yellow_strip").style.left = 0;
+            console.log("yellow_strip");
+          } else {
+            document.getElementById("yellow_strip").style.left = -10 + "vw";
+            console.log("no yellow_strip");
+          };
+
+          // yellow flag
+          if ( data_state.includes("yellow_flag"))
+          {
+            document.getElementById("yellow_flag").style.left = 0;
+            console.log("yellow_flag");
+          } else {
+            document.getElementById("yellow_flag").style.left = -10 + "vh";
+            console.log("no yellow_flag");
+          };
+
+          // purple half circle top
+          if ( data_state.includes("purple_half_circle_top"))
+          {
+            document.getElementById("purple_half_circle_top").style.top = 0;
+            setLogoStyle("logo_part_white");
+            console.log("purple_half_circle_top");
+          } else {
+            document.getElementById("purple_half_circle_top").style.top = -17 + "vw";
+            console.log("no purple_half_circle_top");
+          };
+
+          // purple half circle bottom
+          if ( data_state.includes("purple_half_circle_bottom"))
+          {
+            document.getElementById("purple_half_circle_bottom").style.bottom = 0;
+            document.getElementById("yellow_flag").style.bottom = 20 + "vh";
+            console.log("purple_half_circle_bottom");
+          } else {
+            document.getElementById("purple_half_circle_bottom").style.bottom = -10 + "vw";
+            document.getElementById("yellow_flag").style.bottom = 5 + "vh";
+            console.log("no purple_half_circle_bottom");
+          };
+
+          // purple strip bottom
+          if ( data_state.includes("purple_strip_bottom"))
+          {
+            document.getElementById("purple_strip_bottom").style.bottom = 0;
+            console.log("purple_strip_bottom");
+          } else {
+            document.getElementById("purple_strip_bottom").style.bottom = -10 + "vw";
+            console.log("no purple_strip_bottom");
+          };
+
+          // yellow_half_strip
+          if ( data_state.includes("yellow_half_strip"))
+          {
+            document.getElementById("yellow_half_strip").style.bottom = 0;
+            console.log("yellow_half_strip");
+          } else {
+            document.getElementById("yellow_half_strip").style.bottom = -25 + "vw";
+            console.log("no yellow_half_strip");
+          };
+
+          // purple blob
+          if ( data_state.includes("purple_blob"))
+          {
+            document.getElementById("purple_blob").style.top = 0;
+            console.log("purple_blob");
+          } else {
+            document.getElementById("purple_blob").style.top = -50 + "vh";
+            console.log("no purple_blob");
+          };
+
+          // right_e
+          if ( data_state.includes("right_e_top"))
+          {
+            document.getElementById("right_e").style.top = 10 + "vh";
+            document.getElementById("right_e").style.right = 0;
+            console.log("right_e_top");
+          } else if ( data_state.includes("right_e_bottom")){
+            document.getElementById("right_e").style.top = 60 + "vh";
+            document.getElementById("right_e").style.right = 0;
+            console.log("right_e_bottom");
+          } else {
+            document.getElementById("right_e").style.right = -4 + "vw";
+            console.log("no right_e");
+          };
+
+          // clear the background so that the overlays don't interfere
+          // with underlying iframe
+          if ( data_state.includes("clear_background"))
+          {
+            document.getElementById("purple_overlay").style.transform = "translateY(100vh)";
+            document.getElementById("white_overlay").style.transform = "translateY(100vh)";
+            document.getElementById("black_overlay").style.transform = "translateY(100vh)";
+            document.getElementById("blue_overlay").style.transform = "translateY(100vh)";
+            document.getElementById("blue_pane_right").style.transform = "translateY(100vh)";
+            document.getElementById("blue_pane_left").style.transform = "translateY(100vh)";
+            document.getElementById("touch_pane").style.transform = "translateY(100vh)";
+          };
+        }
+        else
+        {
+          console.log("nothing special")
+        };
+      };
+
+      function removeDecorations() {
+        console.log("removeDecorations")
+        document.getElementById("purple_overlay").style.opacity = 0;
+        document.getElementById("white_overlay").style.opacity = 0;
+        document.getElementById("black_overlay").style.opacity = 0;
+        document.getElementById("blue_overlay").style.opacity = 0;
+        document.getElementById("blue_pane_right").style.opacity = 0;
+        document.getElementById("blue_pane_left").style.opacity = 0;
+        document.getElementById("touch_pane").style.opacity = 0;
+        document.getElementById("logo_color").style.left = -12 + "vw";
+        document.getElementById("logo_part_white").style.left = -12 + "vw";
+        document.getElementById("logo_white").style.left = -12 + "vw";
+        document.getElementById("yellow_strip").style.left = -10 + "vw";
+        document.getElementById("yellow_flag").style.left = -10 + "vh";
+        document.getElementById("purple_half_circle_top").style.top = -17 + "vw";
+        document.getElementById("purple_half_circle_bottom").style.bottom = -10 + "vw";
+        document.getElementById("purple_strip_bottom").style.bottom = -10 + "vw";
+        document.getElementById("yellow_half_strip").style.bottom = -25 + "vw";
+        document.getElementById("purple_blob").style.top = -50 + "vh";
+        document.getElementById("right_e").style.right = -4 + "vw";
+        document.getElementById("blue_strip").style.right = "-" + document.getElementById("blue_strip").offsetWidth + "px";
+      };
+
+      Reveal.on( 'slidechanged', event => {
+        if (overview_shown == false)
+        {
+          addDecorations();
+        }
+      });
+      Reveal.on( 'overviewshown', event => {
+        overview_shown = true;
+        removeDecorations();
+      });
+      Reveal.on( 'overviewhidden', event => {
+        overview_shown = false;
+        addDecorations();
+      });
+    </script>
+
+  </body>
+</html>

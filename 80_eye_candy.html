@@ -1,0 +1,84 @@
+<!--
+Code rendering unfortunately only properly works in pure .html files. If you
+find out why, please let me know.
+-->
+
+<section>
+  <section data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <!-- Image by <a href="https://pixabay.com/users/pixel2013-2364555/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">S. Hermann &amp; F. Richter</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">Pixabay</a> -->
+    <h1>Eye Candy</h1>
+  </section>
+
+  <section data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Code Highlighting</h2>
+    <pre><code data-line-numbers="4-7|9-11|19-21" data-ln-start-from="7">
+    <table>
+      <tr>
+        <td>Avocados</td>
+        <td>$2</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Apples</td>
+        <td>$1</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Oranges</td>
+        <td>$2</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>Kiwi</td>
+        <td>$3</td>
+        <td>1</td>
+      </tr>
+    </table>
+    </code></pre>
+  </section>
+
+  <section data-auto-animate data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Animated Code</h2>
+    <pre data-id="code-animation"><code data-trim data-line-numbers>
+t planets = [
+{ name: 'mars', diameter: 6779 },
+
+    </code></pre>
+  </section>
+  <section data-auto-animate data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Animated Code</h2>
+    <pre data-id="code-animation"><code data-trim data-line-numbers>
+t planets = [
+{ name: 'mars', diameter: 6779 },
+{ name: 'earth', diameter: 12742 },
+{ name: 'jupiter', diameter: 139820 }
+
+    </code></pre>
+  </section>
+  <section data-auto-animate data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Animated Code</h2>
+    <pre data-id="code-animation"><code data-trim data-line-numbers>
+t circumferenceReducer = ( c, planet ) => {
+return c + planet.diameter * Math.PI;
+
+
+t planets = [
+{ name: 'mars', diameter: 6779 },
+{ name: 'earth', diameter: 12742 },
+{ name: 'jupiter', diameter: 139820 }
+
+
+t c = planets.reduce( circumferenceReducer, 0 )
+    </code></pre>
+  </section>
+
+  <section data-state="standard" data-background="./files/macarons-2548827_1920.jpg">
+    <h2>Beautiful LaTeX</h2>
+    \[\begin{aligned}
+    \dot{x} &amp; = \sigma(y-x) \\
+    \dot{y} &amp; = \rho x - y - xz \\
+    \dot{z} &amp; = -\beta z + xy
+    \end{aligned}\]
+  </section>
+</section>
+
